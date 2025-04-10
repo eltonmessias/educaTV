@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+  
+      .icon {
+        font-size: 1.8rem;
+      }
+    }
+  
+    .menu {
+      display: flex;
+      gap: 1.5rem;
+  
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+  
+        &:hover {
+          color: #ffe082;
+        }
+      }
+    }
+  }
+  

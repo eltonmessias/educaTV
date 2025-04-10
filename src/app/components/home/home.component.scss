@@ -1,0 +1,67 @@
+.educa-container {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 1.5rem;
+    background: #fff9ed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    section {
+      background: #fff3c7;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+      h2, h3 {
+        color: #d84315;
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    .aulas, .manual-items {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+  
+      .aula, .item {
+        background: #e3f2fd;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+      }
+    }
+  
+    .relacionados {
+      background: #fffaf0;
+  
+      button {
+        margin-top: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        background: #f57c00;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  
+    footer {
+      background: #1976d2;
+      color: white;
+      padding: 1rem;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      .info, .contact {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
