@@ -1,13 +1,27 @@
 <header class="header">
     <div class="logo">
-        <span class="icon">📺</span>
-        <span class="text">EDUCA TV</span>
+      <span class="icon">📺</span>
+      <span class="text">EDUCA TV</span>
     </div>
-
-    <nav class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#video-aulas">Vídeo Aulas</a>
-        <a href="#manuais">Manuais</a>
-        <a href="#contato">Contato</a>
+  
+    <!-- Menu para desktop -->
+    <nav class="menu desktop">
+        <a routerLink="/sobre" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Sobre</a>
+        <a routerLink="/video-aulas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Vídeo Aulas</a>
+        <a routerLink="/manuais" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Manuais</a>
+        <a routerLink="/contato" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Contato</a>
     </nav>
-</header>
+  
+    <!-- Botão mobile (aparece somente em telas pequenas) -->
+    <button class="menu-button mobile" (click)="toggleMobileMenu()">☰</button>
+  </header>
+  
+  <!-- Menu mobile sempre renderizado para permitir animação -->
+  <nav class="menu-mobile" [class.open]="isMobileMenuOpen">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Home</a>
+    <a routerLink="/sobre" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Sobre</a>
+    <a routerLink="/video-aulas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Vídeo Aulas</a>
+    <a routerLink="/livros" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Livros</a>
+    <a routerLink="/contacto" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Contato</a>
+  </nav>
+  

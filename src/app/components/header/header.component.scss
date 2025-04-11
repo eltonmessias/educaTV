@@ -1,25 +1,24 @@
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     background-color: #1976d2;
     color: white;
     padding: 1rem 2rem;
-    border-radius: 0.5rem;
   
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 1.5rem;
       font-weight: bold;
   
       .icon {
+        margin-right: 0.5rem;
         font-size: 1.8rem;
       }
     }
   
-    .menu {
+    // Menu horizontal para desktop
+    .menu.desktop {
       display: flex;
       gap: 1.5rem;
   
@@ -27,12 +26,73 @@
         color: white;
         text-decoration: none;
         font-weight: 500;
-        transition: color 0.2s ease;
   
         &:hover {
           color: #ffe082;
         }
       }
+    }
+  
+    // Botão mobile (inicialmente escondido em telas maiores)
+    .menu-button.mobile {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
+  /* Menu mobile padrão, sempre renderizado mas com transição */
+  .menu-mobile {
+    overflow: hidden;        /* Esconde o conteúdo quando fechado */
+    max-height: 0;           /* Altura zero quando fechado */
+    opacity: 0;              /* Transparência zero quando fechado */
+    flex-direction: column;
+    background-color: #1976d2;
+    padding: 0 2rem;         /* Padding horizontal */
+    border-top: 1px solid #ffe082;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  
+    a {
+      display: block;
+      margin: 0.5rem 0;
+      color: white;
+      text-decoration: none;
+  
+      &:hover {
+        color: #ffe082;
+      }
+    }
+  
+    /* Estado aberto */
+    &.open {
+      max-height: 500px;     /* Valor alto o suficiente para conter os links */
+      opacity: 1;
+      padding: 1rem 2rem;     /* Padding vertical adicionado quando aberto */
+    }
+  }
+  
+  /* Media queries para responsividade */
+  @media (max-width: 768px) {
+    .header {
+
+        .menu.desktop {
+            display: none;
+          }
+
+        .menu-button.mobile {
+            display: block;
+        }
+        
+    }
+    
+  
+    
+    /* O menu-mobile, mesmo já tendo uma definição base, é garantido como flex em telas pequenas */
+    .menu-mobile {
+      display: flex;
     }
   }
   
