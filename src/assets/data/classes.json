@@ -1,0 +1,146 @@
+{
+    "classes": [
+      {
+        "id": 1,
+        "classe": "1ª Classe",
+        "disciplinas": [
+          { "id": 1, "nome": "Português" },
+          { "id": 2, "nome": "Matemática" },
+          { "id": 3, "nome": "Educação Visual" },
+          { "id": 4, "nome": "Mundo em que Vivemos" }
+        ]
+      },
+      {
+        "id": 2,
+        "classe": "2ª Classe",
+        "disciplinas": [
+          { "id": 5, "nome": "Português" },
+          { "id": 6, "nome": "Matemática" },
+          { "id": 7, "nome": "Educação Musical" },
+          { "id": 8, "nome": "Conhecimento do Meio" }
+        ]
+      },
+      {
+        "id": 3,
+        "classe": "3ª Classe",
+        "disciplinas": [
+          { "id": 9, "nome": "Português" },
+          { "id": 10, "nome": "Matemática" },
+          { "id": 11, "nome": "Educação Moral e Cívica" },
+          { "id": 12, "nome": "Estudo do Meio" }
+        ]
+      },
+      {
+        "id": 4,
+        "classe": "4ª Classe",
+        "disciplinas": [
+          { "id": 13, "nome": "Português" },
+          { "id": 14, "nome": "Matemática" },
+          { "id": 15, "nome": "Educação Física" },
+          { "id": 16, "nome": "Ciências Naturais" }
+        ]
+      },
+      {
+        "id": 5,
+        "classe": "5ª Classe",
+        "disciplinas": [
+          { "id": 17, "nome": "Português" },
+          { "id": 18, "nome": "Matemática" },
+          { "id": 19, "nome": "História" },
+          { "id": 20, "nome": "Geografia" },
+          { "id": 21, "nome": "Ciências Naturais" }
+        ]
+      },
+      {
+        "id": 6,
+        "classe": "6ª Classe",
+        "disciplinas": [
+          { "id": 22, "nome": "Português" },
+          { "id": 23, "nome": "Matemática" },
+          { "id": 24, "nome": "História" },
+          { "id": 25, "nome": "Geografia" },
+          { "id": 26, "nome": "Ciências Naturais" },
+          { "id": 27, "nome": "Inglês" }
+        ]
+      },
+      {
+        "id": 7,
+        "classe": "7ª Classe",
+        "disciplinas": [
+          { "id": 28, "nome": "Português" },
+          { "id": 29, "nome": "Matemática" },
+          { "id": 30, "nome": "História" },
+          { "id": 31, "nome": "Geografia" },
+          { "id": 32, "nome": "Física" },
+          { "id": 33, "nome": "Inglês" }
+        ]
+      },
+      {
+        "id": 8,
+        "classe": "8ª Classe",
+        "disciplinas": [
+          { "id": 34, "nome": "Português" },
+          { "id": 35, "nome": "Matemática" },
+          { "id": 36, "nome": "Física" },
+          { "id": 37, "nome": "Química" },
+          { "id": 38, "nome": "História" },
+          { "id": 39, "nome": "Inglês" }
+        ]
+      },
+      {
+        "id": 9,
+        "classe": "9ª Classe",
+        "disciplinas": [
+          { "id": 40, "nome": "Português" },
+          { "id": 41, "nome": "Matemática" },
+          { "id": 42, "nome": "Física" },
+          { "id": 43, "nome": "Química" },
+          { "id": 44, "nome": "Biologia" },
+          { "id": 45, "nome": "Geografia" },
+          { "id": 46, "nome": "Inglês" }
+        ]
+      },
+      {
+        "id": 10,
+        "classe": "10ª Classe",
+        "disciplinas": [
+          { "id": 47, "nome": "Português" },
+          { "id": 48, "nome": "Matemática" },
+          { "id": 49, "nome": "Física" },
+          { "id": 50, "nome": "Química" },
+          { "id": 51, "nome": "Biologia" },
+          { "id": 52, "nome": "Geometria" },
+          { "id": 53, "nome": "Inglês" }
+        ]
+      },
+      {
+        "id": 11,
+        "classe": "11ª Classe",
+        "disciplinas": [
+          { "id": 54, "nome": "Português" },
+          { "id": 55, "nome": "Matemática" },
+          { "id": 56, "nome": "Física" },
+          { "id": 57, "nome": "Química" },
+          { "id": 58, "nome": "Biologia" },
+          { "id": 59, "nome": "Geometria" },
+          { "id": 60, "nome": "Filosofia" },
+          { "id": 61, "nome": "Inglês" }
+        ]
+      },
+      {
+        "id": 12,
+        "classe": "12ª Classe",
+        "disciplinas": [
+          { "id": 62, "nome": "Português" },
+          { "id": 63, "nome": "Matemática" },
+          { "id": 64, "nome": "Física" },
+          { "id": 65, "nome": "Química" },
+          { "id": 66, "nome": "Biologia" },
+          { "id": 67, "nome": "Filosofia" },
+          { "id": 68, "nome": "Inglês" },
+          { "id": 69, "nome": "Educação Física" }
+        ]
+      }
+    ]
+  }
+  

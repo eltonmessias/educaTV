@@ -1,0 +1,16 @@
+.player-container {
+  width: 100%;
+  position: relative;
+  /* Mantém a proporção 16:9 */
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.player-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  border: 0;
+}

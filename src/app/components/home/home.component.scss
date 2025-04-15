@@ -1,22 +1,69 @@
+@use '../../../styles' as *;
 .educa-container {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding: 1.5rem;
-    background: #fff9ed;
+    background: #FDE6A7;
     color: #333;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
+
+
   
     section {
       background: #fff3c7;
+      width: 80%;
       padding: 1rem;
       border-radius: 1rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+
+      p {
+        text-align: justify;
+      }
+      
+      
+      strong {
+        color: $cor-amarelo-texto;
+      }
   
       h2, h3 {
-        color: #d84315;
+        color: $cor-amarelo-texto;
         margin-bottom: 0.5rem;
       }
+    }
+
+    .sobre{
+      display: flex;
+      gap: 1rem;
+      align-self: center;
+      justify-content: center;
+      align-items: center;
+
+      .sobre-img {
+        height: fit-content;
+        width: 450px;
+        border-radius: 10px;
+      }
+    }
+
+    .materiais {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .material-didatico {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      h3 {
+        font-size: 20px;
+      }
+    }
+    .video-aulas {
+      
     }
   
     .aulas, .manual-items {
@@ -33,9 +80,22 @@
   
     .relacionados {
       background: #fffaf0;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 5rem;
+      .descricao {
+        display: flex;
+        gap: 2rem;
+
+        img {
+          width: 50%;
+          height: fit-content;
+        }
+      }
   
       button {
         margin-top: 0.5rem;
+        width: 100px;
         padding: 0.4rem 0.8rem;
         background: #f57c00;
         color: white;
@@ -44,7 +104,90 @@
         cursor: pointer;
       }
     }
+
+    
   
     
   }
+
+  @media (max-width: 1120px) {
+    .educa-container {
+      padding: 0.5rem;
+
+      section {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 880px) {
+    .educa-container {
+
+      
+
+        
+        .sobre {
+          flex-direction: column;
+          img {
+            width: 700px;
+          }
+          
+        }
+
+        .relacionados {
+          .descricao {
+            font-size: small;
+            // flex-direction: column;
+          }
+          
+        }
+      
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .educa-container {
+      padding:  0.5rem;
+      section {
+        width: 100%;
+      }
+      .sobre {
+        display: flex;
+        flex-direction: column;
+  
+        .sobre-img {
+          width: 100%;
+        }
+  
+        .mobile-hide {
+          display: none;
+        }
+      }
+  
+      .materiais {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .relacionados {
+        padding: 1rem;
+        .descricao {
+          flex-direction: column;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+  
+      
+    }
+
+
+
+
+    }
+    
+
   

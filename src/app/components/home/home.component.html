@@ -1,34 +1,51 @@
 <div class="educa-container">
     <section class="sobre">
-      <h2>Sobre o EducaTV</h2>
-      <p><strong>Missão:</strong> Promover aprendizagem a tráter de malor conteúdo educauovil.</p>
-      <p><strong>Visão:</strong> Tecmr uma referência em a educação acessível vía ωtilita.</p>
-      <p><strong>Mistórico:</strong> O projeto entió umistarse a projetó criar ugrao na desenvolvo.</p>
+      <div class="sobre-text-area">
+        <h2>EducaTV</h2>
+        <p>
+          O EducaTV é uma iniciativa da OSUWELA que tem como objetivo promover a aprendizagem de forma acessível e inclusiva. Através desta plataforma, disponibilizamos vídeo-aulas didáticas e materiais de estudo organizados por disciplina e nível escolar, com foco especial no Ensino Primário e Secundário.
+        </p>
+        <br>
+          <p class="mobile-hide">Acreditamos que a educação de qualidade deve estar ao alcance de todos. Por isso, o EducaTV foi criado para apoiar estudantes, professores e famílias, fornecendo conteúdos pedagógicos cuidadosamente produzidos para reforçar o processo de ensino-aprendizagem dentro e fora da sala de aula.</p>
+        <br>
+          <p class="mobile-hide">Com uma abordagem inovadora e interativa, o EducaTV visa tornar-se uma referência no apoio educacional digital em Moçambique.</p>
+        
+      </div>
+
+      <!-- <img src="assets/imagens/sobre-img.png" alt="sobre"> -->
+      <img class="sobre-img" [ngSrc]="sobre_imagem" width="100" height="100" priority alt="img">
     </section>
   
-    <section class="video-aulas">
-      <h3>Vídeo Aulas</h3>
-      <p>Organisádia pór disquma,</p>
-      <div class="aulas">
-        <div class="aula">📘 Matemática - 1º Ano</div>
-        <div class="aula">🌍 História - 2º Ano</div>
-      </div>
-    </section>
-  
-    <section class="manuais">
-      <h3>Manuais</h3>
-      <p>Oferta manuwaisonlíne plol.</p>
-      <div class="manual-items">
-        <div class="item">📚 Manuais</div>
-        <div class="item">📘 Lívrára</div>
-      </div>
+    <section class="materiais">
+      <section class="material-didatico video-aulas">
+        <h3>Vídeo Aulas</h3>
+        <p>As vídeo-aulas do EducaTV foram desenvolvidas para tornar a aprendizagem mais acessível, dinâmica e envolvente. Organizadas por classes e disciplinas, elas oferecem explicações claras e visuais dos conteúdos escolares, permitindo que os alunos revisem as matérias ao seu próprio ritmo, em casa ou na escola. Cada aula é cuidadosamente preparada por educadores qualificados, com o objetivo de complementar o ensino presencial e apoiar o sucesso escolar dos estudantes.</p>
+        <div class="aulas">
+          <!-- <div class="aula">📘 1º Classe a 12 classe</div> -->
+          <div class="aula">🌍 Assistir aulas</div>
+        </div>
+      </section>
+    
+      <section class="material-didatico manuais">
+        <h3>Manuais</h3>
+        <p>O EducaTV disponibiliza também uma coleção de materiais didáticos e livros escolares, organizados por ano letivo e disciplina. Estes materiais podem ser visualizados online com um sistema de folheamento interativo ou descarregados em formato PDF, facilitando o acesso ao conteúdo educativo de forma prática e gratuita. Os livros foram selecionados para acompanhar o currículo nacional, servindo como apoio essencial para alunos, professores e encarregados de educação no processo de aprendizagem.</p>
+        <div class="manual-items">
+          <div class="item">📚 Ver Manuais</div>
+          <!-- <div class="item">📘 Lívrára</div> -->
+        </div>
+      </section>
     </section>
   
     <section class="relacionados">
-      <h3>Conteúdos Relacionados</h3>
-      <p>Mulheres na Ciência</p>
-      <p>Artigos complementares</p>
-      <button>Mulherés na Ciência</button>
+      <h3>Mulheres na ciência</h3>
+      <div class="descricao">
+        <img ngSrc="assets/imagens/women-in-science.png" width="300" height="200" priority alt="wis-img">
+        <div class="desc-text">
+          <p>Espaço dedicado a destacar o papel fundamental das mulheres no avanço do conhecimento científico. Por meio de histórias inspiradoras, perfis de cientistas notáveis e conteúdos educativos, buscamos promover a igualdade de gênero e incentivar meninas e jovens a explorarem o universo da ciência. Esta iniciativa reforça a importância da representatividade e do empoderamento feminino nas áreas de ciência, tecnologia, engenharia e matemática (STEM).</p>
+          <button>Ver Artigos</button>
+        </div>
+      </div>
+      
     </section>
   
    

@@ -1,20 +1,19 @@
+@use '../../../styles' as *;
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1976d2;
+    background-color: $cor-primaria;
     color: white;
-    padding: 1rem 2rem;
+    padding: 0rem 9rem 0.3rem 1rem;
+
   
     .logo {
       display: flex;
       align-items: center;
-      font-weight: bold;
-  
-      .icon {
-        margin-right: 0.5rem;
-        font-size: 1.8rem;
-      }
+      width: 8rem;
+      height: 3rem;
+
     }
   
     // Menu horizontal para desktop
@@ -50,7 +49,7 @@
     max-height: 0;           /* Altura zero quando fechado */
     opacity: 0;              /* Transparência zero quando fechado */
     flex-direction: column;
-    background-color: #1976d2;
+    background-color: $cor-primaria;
     padding: 0 2rem;         /* Padding horizontal */
     border-top: 1px solid #ffe082;
     transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
