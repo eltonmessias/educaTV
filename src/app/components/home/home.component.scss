@@ -63,19 +63,19 @@
       }
     }
     .video-aulas {
-      
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
   
-    .aulas, .manual-items {
-      display: flex;
-      gap: 1rem;
-      margin-top: 0.5rem;
+  
   
       .aula, .item {
         background: #e3f2fd;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
-      }
+        cursor: pointer;
+        text-decoration: none;
     }
   
     .relacionados {

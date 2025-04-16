@@ -1,17 +1,147 @@
+@use '../../../styles' as *;
+
 footer {
-    background: #1976d2;
-    color: white;
-    padding: 1rem;
+  font-family: 'Nunito';
+  background: #1976d2;
+  height: 200px;
+  color: white;
+  padding: 0.1rem;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 5px;
+
+  // Aqui está o layout em grid: 20% para a logo, 70% para a info
+  grid-template-columns: 20% 80%;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+
+  .logo-area {
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: 220px;
+      height: 70px;
+    }
+
+    p {
+      white-space: nowrap;
+      margin-top: 5px;
+    }
+
+    :last-child {
+      width: 100px;
+      height: 40px;
+    }
+  }
+
+  .info {
+    grid-area: 1 / 2 / 2 / 3;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+    a {
+      color: #FFF;
     }
 
-    .info, .contact {
-      font-size: 0.9rem;
+    .info-items {
+      margin: 0 1rem;
     }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      white-space: nowrap;
+    }
+
+    .materiais {
+      // text-decoration: none;
+    }
+
+    .blog {
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .address {
+      white-space: nowrap;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      gap: 5px;
+    }
+  }
+
+  .rights {
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: center;
+  }
 }
+
+@media (max-width: 1100px) {
+  footer{
+    grid-template-columns: 10% 80%;
+  }
+  
+}
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr; // empilha os blocos principais
+    grid-template-rows: auto auto auto;
+    height: auto;
+    padding: 1rem;
+
+    .info {
+      grid-area: auto;
+      flex-wrap: wrap; // permite que quebre lado a lado
+      justify-content: center;
+      gap: 00px;
+
+      .info-items {
+        display: flex;
+        flex-direction: row; // lado a lado
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .contact,
+      .materiais,
+      .blog,
+      .address {
+        white-space: nowrap;
+        text-align: center;
+        margin-bottom: 10px;
+        justify-content: center;
+      }
+
+      .blog {
+        h2 {
+          display: none;
+        }
+      }
+    }
+
+    .logo-area {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 30px;
+      justify-content: center;
+
+        img {
+          width: 100px;
+          height: auto;
+      
+    }
+  }
+    .rights {
+      grid-area: auto;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+  }
+}
+
