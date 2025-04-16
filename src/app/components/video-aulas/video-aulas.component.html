@@ -32,11 +32,11 @@
     <hr class="divider" />
 
     <!-- Player de Vídeo embutido -->
-    <section class="section video-player" *ngIf="selectedVideoId">
+    <section #playerContainer class="player-wrapper video-player" *ngIf="selectedVideoId">
         <h2>Assistindo: {{ selectedVideoTitle }}</h2>
         <app-youtube-player [videoId]="selectedVideoId"></app-youtube-player>
   
-      </section>
+    </section>
   
     <!-- Seção de Vídeos -->
     <section class="section videos-section" *ngIf="selectedSubject">

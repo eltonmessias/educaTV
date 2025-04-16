@@ -1,38 +1,31 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit, AfterViewInit, SimpleChanges, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, AfterViewInit, SimpleChanges, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 
-declare var YT: any; // Declara a variável global da API do YouTube
+declare var YT: any;
 
 @Component({
-  standalone: true,
   selector: 'app-youtube-player',
-  template: `
-    <div #playerContainer class="player-container"></div>
-  `,
-  styles: [`
-    
-  `]
+  standalone: true,
+  templateUrl: './youtube-player.component.html',
+  styleUrls: ['./youtube-player.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class YoutubePlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDestroy {
   @Input() videoId!: string;
   @ViewChild('playerContainer', { static: false }) playerContainer!: ElementRef;
   player: any;
 
-  ngOnInit(): void {
-    // Não crie o player no ngOnInit, use o AfterViewInit.
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
     if ((window as any).YT && (window as any).YT.Player) {
       this.createPlayer();
     } else {
-      // Se a API ainda não estiver carregada, configure o callback global
       (window as any).onYouTubeIframeAPIReady = () => this.createPlayer();
     }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['videoId'] && !changes['videoId'].firstChange) {
-      // Se o vídeo mudou, atualize o player
       if (this.player && typeof this.player.loadVideoById === 'function') {
         this.player.loadVideoById(this.videoId);
       } else {
@@ -42,9 +35,8 @@ export class YoutubePlayerComponent implements OnInit, AfterViewInit, OnChanges,
   }
 
   createPlayer(): void {
-    if (!this.videoId || !this.playerContainer) {
-      return;
-    }
+    if (!this.videoId || !this.playerContainer) return;
+
     this.player = new YT.Player(this.playerContainer.nativeElement, {
       videoId: this.videoId,
       playerVars: {
@@ -55,8 +47,8 @@ export class YoutubePlayerComponent implements OnInit, AfterViewInit, OnChanges,
       },
       events: {
         onReady: (event: any) => {
-          // Se desejar, inicie o vídeo automaticamente:
-          // event.target.playVideo();
+          // event.target.playVideo(); // se quiser forçar autoplay
+          
         }
       }
     });

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, viewChild } from '@angular/core';
 import { Classe } from '../../models/Classe';
 import { Subject } from '../../models/Subject';
 import { CommonModule } from '@angular/common';
@@ -19,6 +19,8 @@ import { YoutubePlayerComponent } from "../youtube-player/youtube-player.compone
   styleUrl: './video-aulas.component.scss'
 })
 export class VideoAulasComponent implements OnInit{
+
+  @ViewChild('playerContainer') playerContainerRef!: ElementRef;
 
 
   // Dados das classes e disciplinas (você pode ajustá-los conforme o currículo)
@@ -126,8 +128,16 @@ export class VideoAulasComponent implements OnInit{
 
   playVideo(videoId: string, videoTitle: string): void {
     const url = `https://www.youtube.com/embed/${videoId}`;
+    if (!videoId) {
+      console.error('ID do vídeo é inválido ou undefined');
+      return;
+    }
     this.selectedVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     this.selectedVideoTitle = videoTitle;
     this.selectedVideoId = videoId
+
+    setTimeout(() => {
+      this.playerContainerRef?.nativeElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 10);
   }
 }
