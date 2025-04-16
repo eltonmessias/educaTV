@@ -1,3 +1,4 @@
+import { Book } from "./Book";
 import { Video } from "./Video";
 
 
@@ -5,5 +6,6 @@ import { Video } from "./Video";
 export interface Subject {
     id: number;
     name: string;
-    videos: Video[]
+    videos?: Video[]
+    books?: Book[]
 }

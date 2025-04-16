@@ -1,0 +1,9 @@
+<div class="blog-detail-container" *ngIf="article">
+    <img [src]="article.image" class="banner" alt="Imagem do artigo" />
+    <h1>{{ article.title }}</h1>
+    <div class="meta">
+      <span>Por {{ article.author }}</span> | <span>{{ article.date }}</span>
+    </div>
+    <div class="content" [innerHTML]="article.content"></div>
+  </div>
+  

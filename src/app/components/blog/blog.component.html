@@ -1,0 +1,18 @@
+<div class="blog-container">
+    <h1>Blog: Mulheres na Ciência</h1>
+  
+    <div class="articles-grid">
+      <div class="article-card" *ngFor="let article of articles">
+        <img [src]="article.image" alt="Capa do artigo" />
+        <div class="card-content">
+          <h2>{{ article.title }}</h2>
+          <p class="excerpt">{{ article.content | slice:0:150 }}...</p>
+          <div class="meta">
+            <span>{{ article.author }}</span> | <span>{{ article.date }}</span>
+          </div>
+          <a [routerLink]="['/blog', article.id]" class="read-more">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

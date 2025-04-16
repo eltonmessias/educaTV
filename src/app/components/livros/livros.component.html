@@ -1,1 +1,40 @@
-<p>livros works!</p>
+<div class="container">
+    <header>
+      <h1>EducaTV - Livros</h1>
+    </header>
+  
+    <!-- Seção de Classes -->
+    <section class="section classes-section">
+      <h2>Classes</h2>
+      <ul class="classes-list">
+        <li *ngFor="let classe of classes"
+            [class.active]="classe.id === selectedClass?.id"
+            (click)="setSelectedClass(classe)">
+            {{ classe.name }}
+        </li>
+      </ul>
+    </section>
+  
+    <hr class="divider" />
+  
+    <section class="section books-section" *ngIf="books.length > 0">
+        <h2>Livros Disponíveis</h2>
+        <div class="books-grid">
+          <div class="book-card" *ngFor="let book of books">
+            <h3>{{ book.title }}</h3>
+            <p>{{ book.description }}</p>
+            <a [href]="book.url" target="_blank" rel="noopener noreferrer">📘 Ver/Download</a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Caso não haja livros -->
+      <section class="section no-books" *ngIf="selectedSubject && books.length === 0">
+        <p>Nenhum livro disponível para esta disciplina.</p>
+      </section>
+  
+   
+  
+    
+  </div>
+  

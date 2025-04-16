@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "title": "Marie Curie: A mulher que brilhou com o rádio",
+      "content": "Marie Curie foi uma física e química polonesa, pioneira no estudo da radioatividade.Ela foi a primeira mulher a receber um Prêmio Nobel e a única pessoa a ganhar em duas categorias científicas diferentes: Física e Química.Seu trabalho revolucionou a medicina e a física nuclear.Ela também foi a primeira professora mulher na Universidade de Paris.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_75IDQ3YQtjTLITICpcrCp9kx06DRhrwtw&s",
+      "author": "Equipe EducaTV",
+      "date": "16 de Abril de 2025"
+    },
+    {
+      "id": 2,
+      "title": "Katherine Johnson: Cálculos que levaram o homem à Lua",
+      "content": "Katherine Johnson foi uma matemática americana que trabalhou na NASA durante a corrida espacial.Seus cálculos precisos foram cruciais para o sucesso das primeiras missões espaciais, incluindo a que levou o homem à Lua.Ela quebrou barreiras de gênero e raça, tornando-se um ícone da igualdade na ciência...",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ87R3iGCVhYREC07ug4dT4dax1YfoPnHTwg&s",
+      "author": "Equipe EducaTV",
+      "date": "15 de Abril de 2025"
+    }
+  ]
