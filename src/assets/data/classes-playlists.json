@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name": "9ª Classe",
+        "subjects": [
+          {
+            "id": 101,
+            "name": "Matemática",
+            "playlistId": "PL8ekXvCKwal8XKeP79VHfw1b9rVb8yHy8"
+          },
+          {
+            "id": 102,
+            "name": "Física",
+            "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_10"
+          },
+          {
+            "id": 103,
+            "name": "Biologia",
+            "playlistId": "YOUR_PLAYLIST_ID_FOR_BIOLOGIA_10"
+          }
+        ]
+      },
+    {
+      "id": 2,
+      "name": "10ª Classe",
+      "subjects": [
+        {
+          "id": 101,
+          "name": "Matemática",
+          "playlistId": "PL8ekXvCKwal-030H5NhJF1A_-slUkHPbe"
+        },
+        {
+          "id": 102,
+          "name": "Física",
+          "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_10"
+        },
+        {
+          "id": 103,
+          "name": "Biologia",
+          "playlistId": "YOUR_PLAYLIST_ID_FOR_BIOLOGIA_10"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "11ª Classe",
+      "subjects": [
+        {
+          "id": 201,
+          "name": "Matemática",
+          "playlistId": "PL8ekXvCKwal8XKeP79VHfw1b9rVb8yHy8"
+        },
+        {
+          "id": 202,
+          "name": "Física",
+          "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_11"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "12ª Classe",
+      "subjects": [
+        {
+          "id": 301,
+          "name": "Matemática",
+          "playlistId": "YOUR_PLAYLIST_ID_FOR_MATEMATICA_12"
+        },
+        {
+          "id": 302,
+          "name": "Física",
+          "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_12"
+        }
+      ]
+    }
+  ]
+  

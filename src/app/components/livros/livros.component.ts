@@ -3,6 +3,7 @@ import { Classe } from '../../models/Classe';
 import { Subject } from '../../models/Subject';
 import { Book } from '../../models/Book'; // novo modelo
 import { CommonModule } from '@angular/common';
+import { BookSubject } from '../../models/BookSubject';
 
 @Component({
   selector: 'app-livros',
@@ -31,14 +32,16 @@ export class LivrosComponent {
             books: [
               { title: 'Matemática 10ª', description: 'Livro oficial do 10º ano', url: '/assets/livros/matematica10.pdf' },
               { title: 'Exercícios', description: 'Lista de exercícios', url: '/assets/livros/exercicios10.pdf' }
-            ]
+            ],
+            playlistId: ''
           },
           {
             id: 102,
             name: 'Física',
             books: [
               { title: 'Física 10ª', description: 'Manual completo de física', url: '/assets/livros/fisica10.pdf' }
-            ]
+            ],
+            playlistId: ''
           }
         ]
       },
@@ -51,7 +54,8 @@ export class LivrosComponent {
             name: 'Matemática',
             books: [
               { title: 'Matemática 11ª', description: 'Livro do 11º ano', url: '/assets/livros/matematica11.pdf' }
-            ]
+            ],
+            playlistId: ''
           }
         ]
       }
@@ -86,4 +90,5 @@ export class LivrosComponent {
 
     this.books = subject.books ?? [];
   }
+  
 }

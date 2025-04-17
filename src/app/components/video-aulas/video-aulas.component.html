@@ -41,13 +41,21 @@
     <!-- Seção de Vídeos -->
     <section class="section videos-section" *ngIf="selectedSubject">
       <h2>Vídeo-aulas de {{ selectedSubject.name }} - {{ selectedClass?.name }}</h2>
-      <div class="videos-grid">
+    
+      <!-- Se não houver vídeos -->
+      <div *ngIf="videos.length === 0" class="no-videos">
+        <p>Nenhuma vídeo-aula disponível para esta disciplina.</p>
+      </div>
+    
+      <!-- Se houver vídeos -->
+      <div class="videos-grid" *ngIf="videos.length > 0">
         <div class="video-card" *ngFor="let video of videos" (click)="playVideo(video.videoId, video.title)">
           <img [src]="video.thumbnailUrl" alt="{{ video.title }}" />
           <h3>{{ video.title }}</h3>
         </div>
       </div>
     </section>
+    
   
     <hr class="divider" />
   
