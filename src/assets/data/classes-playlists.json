@@ -11,12 +11,12 @@
           {
             "id": 102,
             "name": "Física",
-            "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_10"
+            "playlistId": ""
           },
           {
             "id": 103,
             "name": "Biologia",
-            "playlistId": "YOUR_PLAYLIST_ID_FOR_BIOLOGIA_10"
+            "playlistId": ""
           }
         ]
       },
@@ -32,12 +32,12 @@
         {
           "id": 102,
           "name": "Física",
-          "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_10"
+          "playlistId": ""
         },
         {
           "id": 103,
           "name": "Biologia",
-          "playlistId": "YOUR_PLAYLIST_ID_FOR_BIOLOGIA_10"
+          "playlistId": ""
         }
       ]
     },
@@ -53,7 +53,7 @@
         {
           "id": 202,
           "name": "Física",
-          "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_11"
+          "playlistId": ""
         }
       ]
     },
@@ -64,12 +64,12 @@
         {
           "id": 301,
           "name": "Matemática",
-          "playlistId": "YOUR_PLAYLIST_ID_FOR_MATEMATICA_12"
+          "playlistId": ""
         },
         {
           "id": 302,
           "name": "Física",
-          "playlistId": "YOUR_PLAYLIST_ID_FOR_FISICA_12"
+          "playlistId": ""
         }
       ]
     }
