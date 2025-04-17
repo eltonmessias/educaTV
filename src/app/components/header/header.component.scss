@@ -41,12 +41,14 @@
       font-size: 2rem;
       color: white;
       cursor: pointer;
+      margin-left: 15rem;
     }
   }
   
   /* Menu mobile padrão, sempre renderizado mas com transição */
   .menu-mobile {
-    overflow: hidden;        /* Esconde o conteúdo quando fechado */
+    overflow: hidden;   
+        /* Esconde o conteúdo quando fechado */
     max-height: 0;           /* Altura zero quando fechado */
     opacity: 0;              /* Transparência zero quando fechado */
     flex-direction: column;

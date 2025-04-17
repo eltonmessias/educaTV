@@ -1,1 +1,62 @@
-<p>sobre works!</p>
+<div class="sobre-container">
+
+    <!-- Sobre -->
+    <section class="section sobre">
+      <div class="text">
+        <h2>Sobre a EducaTV</h2>
+        <p>
+          A EducaTV é uma plataforma educacional inovadora focada em democratizar o acesso à educação de qualidade por meio de videoaulas e conteúdos didáticos produzidos com especialistas.
+        </p>
+      </div>
+      <div class="image">
+        <img src="assets/imagens/sobre/sobre-img.png" alt="Sobre EducaTV">
+      </div>
+    </section>
+  
+    <!-- Missão -->
+    <section class="section missao">
+      <div class="text">
+        <h2>Nossa Missão</h2>
+        <p>
+          Levar ensino gratuito, acessível e transformador a todos os cantos, fortalecendo o futuro de milhares de estudantes.
+        </p>
+      </div>
+      <div class="image">
+        <img src="assets/imagens/sobre/missao.png" alt="Missão EducaTV">
+      </div>
+    </section>
+  
+    <!-- Estúdios -->
+    <section class="section estudios">
+        <h2>Nossos Estúdios</h2>
+        <div class="slider-wrapper">
+            <div class="slider">
+              <img [src]="studioImages[currentIndex]" alt="Image" class="slider-image">
+          
+              <button class="nav-button prev" (click)="prevImage()">&#10094;</button>
+              <button class="nav-button next" (click)="nextImage()">&#10095;</button>
+            </div>
+          
+            <div class="dots">
+              <span
+                class="dot"
+                *ngFor="let img of studioImages; let i = index"
+                [class.active]="i === currentIndex"
+                (click)="goToImage(i)"
+              ></span>
+            </div>
+          </div>
+      </section>
+      
+  
+    <!-- Patrocinadores -->
+    <section class="section patrocinadores">
+      <h2>Patrocinadores</h2>
+      <div class="logos">
+        <img src="assets/imagens/sobre/patrocinadores/support1.png" alt="Patrocinador 1">
+        <img src="assets/imagens/sobre/patrocinadores/support2.jpg" alt="Patrocinador 2">
+      </div>
+    </section>
+  
+  </div>
+  
