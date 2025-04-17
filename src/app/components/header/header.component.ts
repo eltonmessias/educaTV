@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
+import { Component, HostListener, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -14,5 +14,24 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+
+  isHeaderHidden = false;
+  lastScrollTop = 0;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > this.lastScrollTop && currentScroll > 100) {
+      // Scrolling down
+      this.isHeaderHidden = true;
+    } else {
+      // Scrolling up
+      this.isHeaderHidden = false;
+    }
+
+    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   }
 }

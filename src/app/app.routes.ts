@@ -10,6 +10,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 
 export const routes: Routes = [
+    {path:'', redirectTo:'/home', pathMatch:'full'},
     {path: 'home', component:HomeComponent},
     {path: 'header', component:HeaderComponent},
     {path: 'footer', component:FooterComponent},
