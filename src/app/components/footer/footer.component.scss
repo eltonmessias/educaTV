@@ -1,165 +1,59 @@
-@use '../../../styles' as *;
+@use "../../../styles" as *;
+.footer {
+  background-color: $cor-primaria;
+  color: #eee;
+  padding: 40px 16px 20px;
 
-footer {
-  font-family: 'Nunito';
-  // background: #1976d2;
-  background: #89a8c7;
-  height: 200px;
-  color: white;
-  padding: 0.2rem;
-  padding-top: 2rem;
- 
-  display: grid;
-  column-gap: 20px;
-  row-gap: 5px;
-
-  // Aqui está o layout em grid: 20% para a logo, 70% para a info
-  grid-template-columns: 20% 80%;
-  grid-template-rows: repeat(2, 1fr);
-  align-items: center;
-
-  .logo-area {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-left: 50px;
-  
-    
-    // div {
-    //   align-items: center;
-    //   width: 100%;
-    // }
-
-    // img {
-    //   width: 220px;
-    //   height: 70px;
-    
-
-    p {
-      white-space: nowrap;
-      margin-top: 20px;
-    }
-    :first-child {
-      width: 100px;
-      height: 40px;
-      align-self: center;
-    }
-
-    :last-child {
-      width: 100px;
-      height: 40px;
-      align-self: center;
-
-    }
-  }
-
-  .info {
-    grid-area: 1 / 2 / 2 / 3;
+  .footer-top {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
 
-    a {
-      color: #FFF;
+    > div {
+      flex: 1 1 250px;
     }
 
-    .info-items {
-      margin: 0 1rem;
-    }
-
-    .contact {
+    .footer-logos {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-      white-space: nowrap;
+      gap: 16px;
+
+      img {
+        max-height: 50px;
+        object-fit: contain;
+        // filter: brightness(0) invert(1);
+      }
     }
 
-    .materiais {
-      // text-decoration: none;
-    }
-
-    .blog {
-      white-space: nowrap;
-      text-align: center;
-    }
-
-    .address {
-      white-space: nowrap;
-      flex-direction: column;
-      align-items: center;
-      display: flex;
-      gap: 5px;
-    }
-  }
-
-  .rights {
-    grid-area: 2 / 2 / 3 / 3;
-    text-align: center;
-  }
-}
-
-@media (max-width: 1100px) {
-  footer{
-    grid-template-columns: 10% 80%;
-  }
-  
-}
-@media (max-width: 768px) {
-  footer {
-    grid-template-columns: 1fr; // empilha os blocos principais
-    grid-template-rows: auto auto auto;
-    height: auto;
-    padding: 1rem;
-
-    .info {
-      grid-area: auto;
-      flex-wrap: wrap; // permite que quebre lado a lado
-      justify-content: center;
-      gap: 00px;
-
-      .info-items {
-        display: flex;
-        flex-direction: row; // lado a lado
-        flex-wrap: wrap;
-        gap: 10px;
+    .footer-contact, .footer-address {
+      h3 {
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        color: #fff;
       }
 
-      .contact,
-      .materiais,
-      .blog,
-      .address {
-        white-space: nowrap;
-        text-align: center;
-        margin-bottom: 10px;
-        justify-content: center;
-      }
+      a {
+        color: #ddd;
+        text-decoration: none;
 
-      .blog {
-        h2 {
-          display: none;
+        &:hover {
+          text-decoration: underline;
         }
       }
-    }
 
-    .logo-area {
-      display: flex;
-      gap: 40px;
-      margin-bottom: 50px;
-      justify-content: center;
-
-        img {
-          width: 100px;
-          height: auto;
-      
+      p {
+        margin: 4px 0;
+        font-size: 0.95rem;
+      }
     }
   }
-    .rights {
-      grid-area: auto;
-      text-align: center;
-      margin-top: 1rem;
-      font-size: 14px;
-    }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #bbb;
+    border-top: 1px solid #444;
+    padding-top: 12px;
   }
 }
-

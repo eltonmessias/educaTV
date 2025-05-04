@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -10,4 +11,5 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
 
+  currentYear: number = new Date().getFullYear();
 }
