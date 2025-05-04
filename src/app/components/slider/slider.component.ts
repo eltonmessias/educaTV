@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
@@ -12,17 +12,13 @@ import { interval, Subscription } from 'rxjs';
 export class SliderComponent implements OnInit, OnDestroy{
 
 
-  images: string[] = [
-    'assets/imagens/sobre/estudio/studio1.png',
-    'assets/imagens/sobre/estudio/studio2.png',
-    'assets/imagens/sobre/estudio/studio3.png',
-  ];
+  @Input() images: string[] = [];
   currentSlide: number = 0;
   private slideInterval$: Subscription = new Subscription;
 
   ngOnInit(): void {
     // A cada 2 segundos, atualiza o índice do slide
-    this.slideInterval$ = interval(4000).subscribe(() => {
+    this.slideInterval$ = interval(3000).subscribe(() => {
       this.currentSlide = (this.currentSlide + 1) % this.images.length;
     });
   }

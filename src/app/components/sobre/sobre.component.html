@@ -49,23 +49,9 @@
             Estas aulas são gravadas por um professor da disciplina, e revistas, antes de serem disponibilizadas. Para cada ano lectivo, produzimos ainda um manual de apoio.
           </p>
         </div>
-        <div class="slider-wrapper">
-            <div class="slider">
-              <img [src]="studioImages[currentIndex]" alt="Image" class="slider-image">
-          
-              <button class="nav-button prev" (click)="prevImage()">&#10094;</button>
-              <button class="nav-button next" (click)="nextImage()">&#10095;</button>
-            </div>
-          
-            <div class="dots">
-              <span
-                class="dot"
-                *ngFor="let img of studioImages; let i = index"
-                [class.active]="i === currentIndex"
-                (click)="goToImage(i)"
-              ></span>
-            </div>
-          </div>
+        <div class="slider">
+          <app-slider [images]="studioImages"></app-slider>
+        </div>
       </section>
       
   

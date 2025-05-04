@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { SliderComponent } from "../slider/slider.component";
 
 @Component({
   selector: 'app-sobre',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SliderComponent],
   templateUrl: './sobre.component.html',
   styleUrl: './sobre.component.scss'
 })

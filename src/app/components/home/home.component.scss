@@ -38,10 +38,11 @@
       gap: 1rem;
       align-self: center;
       justify-content: center;
-      // align-items: center;
+ 
 
       .sobre-text-area {
         top: 0;
+        width: 50%;
 
         p {
           a {
@@ -61,7 +62,10 @@
         border-radius: 5px;
         height: fit-content;
         // border-radius: 10px;
-        // width: 60%;
+        width: 90%;
+        app-slider {
+          width: 100%;
+        }
       }
     }
 
@@ -226,10 +230,12 @@
         
         .sobre {
           flex-direction: column;
-          img {
-            width: 700px;
+          .slider {
+            width: 100%;
           }
-          
+          .sobre-text-area {
+            width: 100%;
+          }
         }
 
         .relacionados {
