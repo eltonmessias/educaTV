@@ -1,0 +1,9 @@
+<!-- slider.component.html -->
+<div class="slider-container">
+    <div class="slides" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+      <div class="slide" *ngFor="let image of images">
+        <img [src]="image" [alt]="'Slide ' + (images.indexOf(image) + 1)">
+      </div>
+    </div>
+  </div>
+  
