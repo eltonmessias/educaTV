@@ -1,9 +1,17 @@
-<!-- slider.component.html -->
+<!-- slider.component.html
 <div class="slider-container">
     <div class="slides" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
       <div class="slide" *ngFor="let image of images">
         <img [src]="image" [alt]="'Slide ' + (images.indexOf(image) + 1)">
       </div>
+    </div>
+  </div> -->
+  
+  <div class="slider-container">
+    <div class="slider-track" [style.transform]="getTransform()" [style.transition]="getTransition()">
+      <img *ngIf="images.length" [src]="images[images.length - 1]" class="slide" />
+      <img *ngFor="let img of images" [src]="img" class="slide" />
+      <img *ngIf="images.length" [src]="images[0]" class="slide" />
     </div>
   </div>
   
