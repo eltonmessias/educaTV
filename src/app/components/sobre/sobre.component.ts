@@ -12,10 +12,15 @@ export class SobreComponent {
   @ViewChild('slider') sliderRef!: ElementRef<HTMLDivElement>;
 
   studioImages = [
-    'assets/imagens/sobre/estudio/studio1.jpg',
-    'assets/imagens/sobre/estudio/studio2.jpg',
-    'assets/imagens/sobre/estudio/studio3.jpg',
-    'assets/imagens/sobre/estudio/studio4.jpg'
+    'assets/imagens/sobre/estudio/studio1.png',
+    'assets/imagens/sobre/estudio/studio2.png',
+    'assets/imagens/sobre/estudio/studio3.png',
+    'assets/imagens/sobre/estudio/studio4.png',
+    'assets/imagens/sobre/estudio/studio5.png',
+    'assets/imagens/sobre/estudio/studio6.png',
+    'assets/imagens/sobre/estudio/studio7.png',
+    'assets/imagens/sobre/estudio/studio8.png',
+    'assets/imagens/sobre/estudio/studio9.png'
   ];
 
   currentIndex: number = 0;
