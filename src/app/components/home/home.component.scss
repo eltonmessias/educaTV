@@ -78,7 +78,7 @@
       align-items: center;
       border: none;
    
-      height: 580px;
+
       
       h3 {
         font-size: 20px;
@@ -112,30 +112,35 @@
     }
   
     .relacionados {
-      background: #fffaf0;
+      // background: #fffaf0;
+      box-shadow: none;
       display: flex;
-      flex-direction: column;
-      padding: 2rem 5rem;
-      .descricao {
+      justify-content: center;
+      gap: 20px;
+    
+      div {
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+        width: 30%;
+        
+        align-items: center;
+        border: $cor-primaria 1px solid;
+        border-radius: 10px;
 
         img {
+          width: 100%;
+          height: auto;
+        }
+
+        a{
+          text-align: center;
           width: 50%;
-          height: fit-content;
         }
       }
+      
+        
   
-      button {
-        margin-top: 0.5rem;
-        width: 100px;
-        padding: 0.4rem 0.8rem;
-        background: #f57c00;
-        color: white;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-      }
+      
     }
 
     
@@ -204,14 +209,9 @@
       }
 
       .relacionados {
-        padding: 1rem;
-        .descricao {
-          flex-direction: column;
-
-          img {
-            width: 100%;
-          }
-        }
+        display: flex;
+      
+        
       }
   
       
