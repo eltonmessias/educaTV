@@ -210,7 +210,10 @@
 
       .relacionados {
         display: flex;
-      
+        
+        div {
+          width: 100%;
+        }
         
       }
   
