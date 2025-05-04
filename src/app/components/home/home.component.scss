@@ -165,6 +165,42 @@
     }
     
       
+
+    .financiadores-section {
+      padding: 40px 16px;
+      // background-color: #f9f9f9;
+
+      text-align: center;
+    
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 32px;
+        color: #333;
+      }
+    
+      .logos-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    
+        img {
+          // max-height: 90px;
+          // max-width: 200px;
+          height: auto;
+          width: 300px;
+          filter: grayscale(100%);
+          transition: filter 0.3s ease, transform 0.3s ease;
+    
+          &:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    
     
 
     
