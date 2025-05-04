@@ -38,20 +38,24 @@
       </section>
     </section>
   
-    <section class="relacionados">
-      <div>
-        <h3>Mulheres na ciência</h3>
-        <img src="assets/imagens/mulheres_transparente.png" alt="">
-        <!-- <a routerLink="/livros" routerLinkActive="active" class="item">📚 Ver Manuais</a> -->
-      </div>
-
-      <div>
-        <h3>Noticias</h3>
-        <img src="assets/imagens/noticias_transparente.png" alt="">
-        <!-- <a routerLink="/livros" routerLinkActive="active" class="item">📚 Ver Manuais</a> -->
-      </div>
-      
-    </section>
+    <div class="card-grid">
+      <a [routerLink]="['/mulheres-na-ciencia']" class="card">
+        <img src="assets/imagens/mulheres_transparente.png" alt="Mulheres na Ciência" />
+        <div class="card-content">
+          <h3>Mulheres na Ciência</h3>
+          <p>Explore histórias inspiradoras de mulheres que marcaram a ciência.</p>
+        </div>
+      </a>
+    
+      <a [routerLink]="['/noticias']" class="card">
+        <img src="assets/imagens/noticias_transparente.png" alt="Notícias" />
+        <div class="card-content">
+          <h3>Notícias</h3>
+          <p>Fique atualizado com as últimas notícias e novidades do projeto.</p>
+        </div>
+      </a>
+    </div>
+    
   
    
   </div>
