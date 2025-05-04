@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "titulo": "Marie Curie: A Mulher que Mudou a Ciência",
+      "descricao": "Documentário sobre a vida e legado de Marie Curie.",
+      "youtubeUrl": "https://www.youtube.com/embed/rb7TVW77ZCs"
+    },
+    {
+      "id": 2,
+      "titulo": "As Mulheres na Ciência Moderna",
+      "descricao": "Histórias de cientistas mulheres na Biologia.",
+      "youtubeUrl": "https://www.youtube.com/embed/6zT0dMRinPU?si=pYL6w3S2KPDcdIEg"
+    },
+    {
+      "id": 3,
+      "titulo": "Mulheres na Tecnologia e Engenharia",
+      "descricao": "Entrevistas com mulheres líderes na tecnologia.",
+      "youtubeUrl": "https://www.youtube.com/embed/Ku-wytYT_9k?si=_txGJJkWMU0-jVSX"
+    }
+  ]
+  

@@ -1,0 +1,24 @@
+<section class="intro">
+    <h1>Mulheres na Ciência</h1>
+    <p>
+      Esta página celebra as conquistas das mulheres no mundo científico,
+      destacando histórias inspiradoras e conteúdos educativos. Acompanhe os vídeos abaixo e conheça mais sobre essas figuras incríveis.
+    </p>
+  </section>
+  
+  <section class="videos" *ngIf="videos.length > 0">
+    <div class="video-card" *ngFor="let video of videos">
+      <div class="video-frame">
+        <iframe
+          [src]="video.youtubeUrl | safe"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h2>{{ video.titulo }}</h2>
+      <p>{{ video.descricao }}</p>
+    </div>
+  </section>
+  

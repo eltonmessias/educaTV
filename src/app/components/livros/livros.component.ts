@@ -4,6 +4,7 @@ import { Subject } from '../../models/Subject';
 import { Book } from '../../models/Book'; // novo modelo
 import { CommonModule } from '@angular/common';
 import { BookSubject } from '../../models/BookSubject';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-livros',
@@ -18,52 +19,15 @@ export class LivrosComponent {
   selectedSubject: Subject | null = null;
   books: Book[] = [];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.classes = [
-      {
-        id: 1,
-        name: '10ª Classe',
-        subjects: [
-          {
-            id: 101,
-            name: 'Matemática',
-            books: [
-              { title: 'Matemática 10ª', description: 'Livro oficial do 10º ano', url: '/assets/livros/matematica10.pdf' },
-              { title: 'Exercícios', description: 'Lista de exercícios', url: '/assets/livros/exercicios10.pdf' }
-            ],
-            playlistId: ''
-          },
-          {
-            id: 102,
-            name: 'Física',
-            books: [
-              { title: 'Física 10ª', description: 'Manual completo de física', url: '/assets/livros/fisica10.pdf' }
-            ],
-            playlistId: ''
-          }
-        ]
-      },
-      {
-        id: 2,
-        name: '11ª Classe',
-        subjects: [
-          {
-            id: 201,
-            name: 'Matemática',
-            books: [
-              { title: 'Matemática 11ª', description: 'Livro do 11º ano', url: '/assets/livros/matematica11.pdf' }
-            ],
-            playlistId: ''
-          }
-        ]
-      }
-    ];
-
-    this.selectedClass = this.classes[0];
-    this.selectedSubject = this.selectedClass.subjects[0];
-    this.loadBooksForSubject(this.selectedSubject);
+    this.http.get<Classe[]>('assets/data/manuais.json').subscribe(data => {
+      this.classes = data;
+      this.selectedClass = this.classes[0]
+      this.selectedSubject = this.selectedClass.subjects[0]
+      this.loadBooksForSubject(this.selectedSubject)
+    })
   }
 
   setSelectedClass(classe: Classe): void {

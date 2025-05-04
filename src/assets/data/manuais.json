@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "name": "10ª Classe",
+      "subjects": [
+        {
+          "id": 101,
+          "name": "Matemática",
+          "books": [
+            {
+              "title": "Matemática 10ª",
+              "description": "Livro oficial do 10º ano",
+              "url": "https://drive.google.com/file/d/0B7T0RV1Wukm2VHhydlo5aXg3bUk/view?usp=sharing&resourcekey=0-wkBBHL5gheX8ES17pbrX3A"
+            },
+            {
+              "title": "Exercícios",
+              "description": "Lista de exercícios",
+              "url": "/assets/livros/exercicios10.pdf"
+            }
+          ],
+          "playlistId": ""
+        },
+        {
+          "id": 102,
+          "name": "Física",
+          "books": [
+            {
+              "title": "Física 10ª",
+              "description": "Manual completo de física",
+              "url": "/assets/livros/fisica10.pdf"
+            }
+          ],
+          "playlistId": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "11ª Classe",
+      "subjects": [
+        {
+          "id": 201,
+          "name": "Matemática",
+          "books": [
+            {
+              "title": "Matemática 11ª",
+              "description": "Livro do 11º ano",
+              "url": "/assets/livros/matematica11.pdf"
+            }
+          ],
+          "playlistId": ""
+        }
+      ]
+    }
+  ]
+  

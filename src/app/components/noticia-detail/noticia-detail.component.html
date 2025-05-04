@@ -1,0 +1,12 @@
+<section class="noticia-detalhe" *ngIf="noticia">
+    <a routerLink="/noticias" class="voltar">← Voltar às notícias</a>
+  
+    <h1>{{ noticia.titulo }}</h1>
+  
+    <img [src]="noticia.imagem" [alt]="noticia.titulo" />
+  
+    <div class="conteudo">
+      <p>{{ noticia.conteudo }}</p>
+    </div>
+  </section>
+  

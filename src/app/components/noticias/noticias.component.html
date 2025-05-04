@@ -1,0 +1,15 @@
+<section class="noticias-page">
+    <h1>Notícias</h1>
+  
+    <div class="noticias-grid">
+      <div class="noticia-card" *ngFor="let noticia of noticias">
+        <img [src]="noticia.imagem" [alt]="noticia.titulo" />
+        <div class="conteudo">
+          <h2>{{ noticia.titulo }}</h2>
+          <p>{{ noticia.resumo }}</p>
+          <a [routerLink]="['/noticias', noticia.id]" class="ler-mais">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
