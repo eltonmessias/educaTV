@@ -12,38 +12,28 @@
       
     </section>
     
-    <section class="materiais">
-      <section class="material-didatico video-aulas">
-        <h3>Vídeo Aulas</h3>
-        <h4>Aprende ao teu ritmo. Revê as aulas, resolve os exercícios</h4>
-        <p>As disciplinas de Ciências ficam mais fáceis quando podes ver e rever a matéria, ao teu ritmo, as vezes que precisares. Tens conceitos, explicações, aplicações, exercícios e resoluções, e uma componente de auto-avaliação, que te vai ajudar a perceber o teu progresso.
-        </p>
-        <img src="assets/imagens/video aulas_transparente.png" alt="">
-
-          <!-- <div class="aula">📘 1º Classe a 12 classe</div> -->
-          <a routerLink="/video-aulas" routerLinkActive="active" class="button">🌍 Assistir aulas</a>
-      </section>
-    
-      <section class="material-didatico manuais">
-        <h3>Manuais</h3>
-        <h4>Aprofunda os teus conhecimentos e faz a tua auto-avaliação</h4>
-        <p>Os manuais da EducaTV relacionam cada vídeo-aula com a respectiva matéria, permitindo aprofundar conhecimentos, praticar através de exercícios e avaliar os conhecimentos adquiridos.
-        </p>
-
-        <img src="assets/imagens/manuais_transparente.png" alt="">
-   
-          <a routerLink="/livros" routerLinkActive="active" class="button">📚 Ver Manuais</a>
-          <!-- <div class="item">📘 Lívrára</div> -->
-  
-      </section>
-    </section>
-  
     <div class="card-grid">
+      <a [routerLink]="['/video-aulas']" class="card">
+        <img src="assets/imagens/video aulas_transparente.png" alt="Vídeo Aulas" />
+        <div class="card-content">
+          <h3>Vídeo-aulas</h3>
+          <p>Aprende ao teu ritmo. Revê as aulas, resolve os exercícios. Tens explicações, exercícios e auto-avaliação para perceberes o teu progresso.</p>
+        </div>
+      </a>
+    
+      <a [routerLink]="['/livros']" class="card">
+        <img src="assets/imagens/manuais_transparente.png" alt="Manuais" />
+        <div class="card-content">
+          <h3>Manuais</h3>
+          <p>Relacionam-se com cada vídeo-aula, permitindo aprofundar conhecimentos e praticar com exercícios e avaliações.</p>
+        </div>
+      </a>
+    
       <a [routerLink]="['/mulheres-na-ciencia']" class="card">
         <img src="assets/imagens/mulheres_transparente.png" alt="Mulheres na Ciência" />
         <div class="card-content">
           <h3>Mulheres na Ciência</h3>
-          <p>Explore histórias inspiradoras de mulheres que marcaram a ciência.</p>
+          <p>Conheça mulheres moçambicanas que seguiram carreiras em STEM e inspire-se com os seus exemplos reais.</p>
         </div>
       </a>
     
@@ -51,18 +41,29 @@
         <img src="assets/imagens/noticias_transparente.png" alt="Notícias" />
         <div class="card-content">
           <h3>Notícias</h3>
-          <p>Fique atualizado com as últimas notícias e novidades do projeto.</p>
+          <p>O que há de novo na EducaTV? Fique atualizado com novidades, eventos e desenvolvimentos.</p>
         </div>
       </a>
     </div>
+    
+    
 
     <div class="financiadores-section">
-      <h2>Financiadores</h2>
       <div class="logos-container">
-        <img src="assets/logos/financiadores/support1.png" alt="Financiador 1" />
-        <img src="assets/logos/financiadores/support2.jpg" alt="Financiador 2" />
+        <div class="logo-item">
+          <h2 class="logo-label">Um Projeto</h2>
+          <img src="assets/logos/financiadores/support1.png" alt="Financiador 1" />
+        </div>
+        <div class="logo-item">
+          <h2 class="logo-label">Financiamento</h2>
+          <img src="assets/logos/financiadores/support2.jpg" alt="Financiador 2" />
+        </div>
       </div>
     </div>
+    
+    
+    
+    
     
   
    

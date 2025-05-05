@@ -1,283 +1,210 @@
 @use '../../../styles' as *;
+
 .educa-container {
-    font-family: 'Nunito', sans-serif;
-    padding: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  background: #FFF;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  section {
     background: #FFF;
-    color: #333;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+
+    h2, h3 {
+      color: $cor-amarelo-texto;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    strong {
+      color: $cor-amarelo-texto;
+    }
+  }
+
+  .sobre {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 6rem;
-
-    section {
-      background: #FFF;
-      width: 80%;
-      padding: 1rem;
-      border-radius: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-
-      p {
-        text-align: justify;
+    gap: 2rem;
+    width: 100%;
+  
+    @media (max-width: 880px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .slider {
+      flex: 1;
+      max-width: 70%;
+      border-radius: 10px;
+      overflow: hidden;
+  
+      app-slider {
+        width: 100%;
       }
-      
-      
-      strong {
+  
+      @media (max-width: 880px) {
+        max-width: 100%;
+      }
+    }
+  
+    .sobre-text-area {
+      flex: 1;
+      max-width: 70%;
+  
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
         color: $cor-amarelo-texto;
       }
   
-      h2, h3 {
-        color: $cor-amarelo-texto;
-        margin-bottom: 0.5rem;
-      }
-    }
-
-    .sobre{
-      display: flex;
-      gap: 1rem;
-      align-self: center;
-      justify-content: center;
- 
-
-      .sobre-text-area {
-        top: 0;
-        width: 50%;
-
-        p {
-          a {
-            text-decoration: none;
-            padding: 1px 5px;
-            font-size: smaller;
-            background:$cor-primaria;
-            border-radius: 5px;
-            color: white;
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: justify;
+  
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: white;
+          background: $cor-primaria;
+          padding: 0.25rem 0.25rem;
+          border-radius: 5px;
+          font-size: 0.9rem;
+  
+          &:hover {
+            background: darken($cor-primaria, 10%);
           }
         }
-
-        
       }
-
-      .slider {
-        border-radius: 5px;
-        height: fit-content;
-        // border-radius: 10px;
-        width: 90%;
-        app-slider {
-          width: 100%;
-        }
+  
+      @media (max-width: 880px) {
+        max-width: 100%;
       }
     }
+  }
+  
 
-    .materiais {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      justify-content: center;
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    .material-didatico {
+  
+    a.card {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      border: none;
-
-      img {
-        width: 100%;
-       
-      }
-
-      h3 {
-        font-size: 20px;
-      }
-
-      .button{
-        background: #e3f2fd;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        text-decoration: none;
-      }
-    }
-  
-      
-  
-    
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); // ← sempre 2 colunas lado a lado
-      gap: 24px;
-      padding: 16px;
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr; // ← responsivo para mobile
-      }
-      
-    }
-    
-    
-    .card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
       background: #fff;
-      border-radius: 12px;
+      border-radius: 1rem;
+      text-decoration: none;
       overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      height: 100%; // garante altura uniforme
+  
       &:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-4px);
       }
-    
+  
       img {
         width: 100%;
-        height: 280px;
-        // object-fit: cover;
-        display: block;
+        height: 240px; // aumenta o tamanho da imagem
+        object-fit: cover;
+        background: #f0f0f0;
       }
-    
-      .card-content {
-        padding: 16px;
-        flex-grow: 1;
-        text-align: center;
-    
-        h3 {
-          margin: 0 0 8px;
-          font-size: 1.2rem;
-          align-self: center;
-        }
-    
-        p {
-          margin: 0;
-          font-size: 0.95rem;
-          color: #555;
-        }
-      }
-    }
-    
-      
-
-    .financiadores-section {
-      padding: 40px 16px;
-      // background-color: #f9f9f9;
-
-      text-align: center;
-    
-      h2 {
-        font-size: 1.8rem;
-        margin-bottom: 32px;
-        color: #333;
-      }
-    
-      .logos-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-    
-        img {
-          // max-height: 90px;
-          // max-width: 200px;
-          height: auto;
-          width: 300px;
-          filter: grayscale(100%);
-          transition: filter 0.3s ease, transform 0.3s ease;
-    
-          &:hover {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-          }
-        }
-      }
-    }
-    
-    
-
-    
   
-    
+      .card-content {
+        padding: 1.5rem;
+  
+        h3 {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          color: $cor-amarelo-texto;
+        }
+  
+        p {
+          font-size: 1.05rem;
+          color: #444;
+          text-align: justify;
+        }
+      }
+    }
   }
+  
 
-  @media (max-width: 1120px) {
-    .educa-container {
+  .financiadores-section {
+    padding: 3rem 0;
+    text-align: center;
+  
+    .logos-container {
+      display: flex;
+      justify-content: center; /* Centraliza os itens na linha */
+      gap: 10rem;
+    }
+  
+    .logo-item {
+      position: relative;
+      display: inline-block; /* Coloca os itens lado a lado */
+      text-align: center;
+    }
+  
+    .logo-item h2 {
+ 
+      // transform: translateX(-50%);
+      // background-color: rgba(0, 0, 0, 0.6);
+      color: $cor-primaria;
       padding: 0.5rem;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      margin: 10px;
+    }
+  
+    .logo-item img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+  
+  
+  
+  
+  
 
-      section {
+  // Responsivo
+  @media (max-width: 1024px) {
+    padding: 1rem;
+
+    .sobre {
+      flex-direction: column;
+
+      .slider, .sobre-text-area {
         width: 100%;
       }
     }
   }
-
-  @media (max-width: 880px) {
-    .educa-container {
-
-      
-
-        
-        .sobre {
-          flex-direction: column;
-          .slider {
-            width: 100%;
-          }
-          .sobre-text-area {
-            width: 100%;
-          }
-        }
-
-        .relacionados {
-          .descricao {
-            font-size: small;
-            // flex-direction: column;
-          }
-          
-        }
-      
-    }
-  }
-  
 
   @media (max-width: 768px) {
-    .educa-container {
-      padding:  0.5rem;
-      section {
-        width: 100%;
-      }
-      .sobre {
-        display: flex;
-        flex-direction: column;
-  
-        .sobre-img {
-          width: 100%;
-        }
-  
-        .mobile-hide {
-          display: none;
-        }
-      }
-  
-      .materiais {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .relacionados {
-        display: flex;
-        gap: 10px;
-        
-        div {
-          width: 100%;
-        }
-        
-      }
-  
-      
+    .card-grid {
+      grid-template-columns: 1fr;
     }
-
-
-
-
-    }
-    
-
-  
+  }
+}
