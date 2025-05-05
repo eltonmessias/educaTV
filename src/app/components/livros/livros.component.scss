@@ -3,6 +3,23 @@
     margin: auto;
     padding: 1rem;
     font-family: 'Nunito', sans-serif;
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    
+        h1 {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .intro-text {
+          max-width: 900px;
+          margin: 0 auto;
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #444;
+        }
+    }
   }
   
   .section {
