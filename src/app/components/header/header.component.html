@@ -1,28 +1,31 @@
-<header [class.hide]="isHeaderHidden" class="header">
-  
-        <img class="logo" src="assets/logos/educaTV-logo.png" alt="logo">
-  
-    <!-- Menu para desktop -->
-    <nav class="menu desktop">
-        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a routerLink="/sobre" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Sobre</a>
-        <a routerLink="/video-aulas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Vídeo Aulas</a>
-        <a routerLink="/livros" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Manuais</a>
-        <a routerLink="/mulheres-na-ciencia" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Mulheres na Ciência</a>
-        <a routerLink="/noticias" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Notícias</a>
+<header class="app-header" [class.hide]="isHeaderHidden">
+  <div class="header-content">
+    <img class="logo" src="assets/logos/educaTV-logo.png" alt="EducaTV logo">
+
+    <!-- Navegação desktop -->
+    <nav class="nav-desktop">
+      <a routerLink="/home"       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/sobre"      routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sobre</a>
+      <a routerLink="/video-aulas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Vídeo Aulas</a>
+      <a routerLink="/livros"     routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Manuais</a>
+      <a routerLink="/mulheres-na-ciencia" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Mulheres na Ciência</a>
+      <a routerLink="/noticias"   routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Notícias</a>
     </nav>
-  
-    <!-- Botão mobile (aparece somente em telas pequenas) -->
-    <button class="menu-button mobile" (click)="toggleMobileMenu()">☰</button>
-  </header>
-  
-  <!-- Menu mobile sempre renderizado para permitir animação -->
-  <nav class="menu-mobile" [class.open]="isMobileMenuOpen">
-    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Home</a>
-    <a routerLink="/sobre" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Sobre</a>
-    <a routerLink="/video-aulas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Vídeo Aulas</a>
-    <a routerLink="/livros" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Manuais</a>
-    <a routerLink="/mulheres-na-ciencia" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Mulheres na Ciência</a>
-    <a routerLink="/noticias" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()">Notícias</a>
+
+    <!-- Botão mobile -->
+    <button class="btn-menu-mobile" (click)="toggleMobileMenu()">
+      <span class="material-icons">☰</span>
+    </button>
+  </div>
+
+  <!-- Menu mobile -->
+  <nav class="nav-mobile" [class.open]="isMobileMenuOpen">
+    <a *ngFor="let link of mobileLinks"
+       [routerLink]="link.path"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact: true}"
+       (click)="toggleMobileMenu()">
+      {{ link.label }}
+    </a>
   </nav>
-  
+</header>

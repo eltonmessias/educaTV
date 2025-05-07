@@ -20,6 +20,17 @@ export class HeaderComponent {
   isHeaderHidden = false;
   lastScrollTop = 0;
 
+  mobileLinks = [
+    { path: '/home', label: 'Home' },
+    { path: '/sobre', label: 'Sobre' },
+    { path: '/video-aulas', label: 'Vídeo Aulas' },
+    { path: '/livros', label: 'Manuais' },
+    { path: '/mulheres-na-ciencia', label: 'Mulheres na Ciência' },
+    { path: '/noticias', label: 'Notícias' },
+  ];
+
+
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
