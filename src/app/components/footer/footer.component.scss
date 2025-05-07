@@ -3,7 +3,7 @@
 .footer {
   background-color: $cor-primaria;
   color: #eee;
-  padding: 40px 16px 20px;
+  padding: 40px 80px;
 
   .footer-top {
     display: flex;
@@ -70,5 +70,13 @@
     color: #bbb;
     border-top: 1px solid #444;
     padding-top: 12px;
+  }
+}
+
+@media (max-width: 780px) {
+  .footer {
+    background-color: $cor-primaria;
+    color: #eee;
+    padding: 30px 20px;
   }
 }
