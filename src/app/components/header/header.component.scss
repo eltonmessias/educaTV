@@ -12,7 +12,7 @@
 }
 
 .app-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   background: var(--header-bg);
@@ -27,6 +27,7 @@
 
   .header-content {
     display: flex;
+    // position: fixed;
     align-items: center;
     justify-content: space-between;
     height: var(--header-height);
