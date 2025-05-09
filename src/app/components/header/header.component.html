@@ -1,17 +1,25 @@
 <header class="app-header" [class.hide]="isHeaderHidden">
   <div class="header-content">
-    <img class="logo" src="assets/logos/educaTV-logo.png" alt="EducaTV logo">
-    <img class="logo" src="assets/imagens/Flag_of_Mozambique.png" alt="EducaTV logo">
+    
+    <!-- Esquerda: Logo -->
+    <div class="header-left">
+      <img class="logo" src="assets/logos/educaTV-logo.png" alt="EducaTV logo">
+    </div>
 
-    <!-- Navegação desktop -->
+    <!-- Centro: Menu (versão desktop) -->
     <nav class="nav-desktop">
-      <a routerLink="/home"       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a routerLink="/sobre"      routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sobre</a>
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/sobre" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sobre</a>
       <a routerLink="/video-aulas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Vídeo Aulas</a>
-      <a routerLink="/livros"     routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Manuais</a>
+      <a routerLink="/livros" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Manuais</a>
       <a routerLink="/mulheres-na-ciencia" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Mulheres na Ciência</a>
-      <a routerLink="/noticias"   routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Notícias</a>
+      <a routerLink="/noticias" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Notícias</a>
     </nav>
+
+    <!-- Direita: Bandeira -->
+    <div class="header-right">
+      <img class="logo flag" src="assets/imagens/Flag_of_Mozambique.png" alt="Moçambique">
+    </div>
 
     <!-- Botão mobile -->
     <button class="btn-menu-mobile" (click)="toggleMobileMenu()">
