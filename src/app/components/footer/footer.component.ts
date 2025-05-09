@@ -11,5 +11,11 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
 
+  socialMediaLinks = [
+    'assets/logos/facebook.png',
+    'assets/logos/instagram.png',
+    'assets/logos/youtube.png',
+  ]
+
   currentYear: number = new Date().getFullYear();
 }

@@ -2,7 +2,7 @@
 
 :host {
   /* Variáveis para fácil customização */
-  --header-height: 4.5rem;
+  --header-height: 6.5rem;
   --logo-scale: 0.8;            /* 80% da altura do header */
   --header-bg: #{$cor-primaria};/* seu cor-primaria */
   --header-color: #ffffff;
@@ -103,7 +103,7 @@
 }
 
 /* Responsivo: até o breakpoint, só mobile */
-@media (max-width:922px ) {
+@media (max-width:1096px ) {
   .app-header {
     .header-content {
       .nav-desktop { display: none !important; }
